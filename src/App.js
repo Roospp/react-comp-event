@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import Titulo from './Componentes/Titulo/Titulo'
+import Input  from './Componentes/Input/Input';
+import Button from './Componentes/Button/Button';
 
 function App() {
+
+const [habilitado,setHabilitado] = useState(false)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Titulo texto={"Desafio estado de los componentes y eventos"}/>
+        <Input setHabilitado={setHabilitado}/>
+        <Button habilitado={habilitado}/>
     </div>
   );
 }
